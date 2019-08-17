@@ -39,7 +39,7 @@ serverPort := goprofile.GetEnv("server.port")
 
 两个文件的配置
 
-同样支持多文件导入：-profile=dev,db 程序自动导入：
+同样支持多文件导入：-profiles=dev,db 程序自动导入：
 
 - config/config.dev.env
 - config/config.db.env
@@ -55,6 +55,10 @@ serverPort := goprofile.GetEnv("server.port")
 
 开发环境不用传参数，配置文件统一使用 config.env
 
-测试环境参数：-profile=test，配置文件使用 config.test.env config.env 前者会覆盖后者
+测试环境参数：-profiles=test，配置文件使用 config.test.env config.env 前者会覆盖后者
 
-正式环境参数：-profile=prod，配置文件使用 config.prod.env config.env 前者会覆盖后者
+正式环境参数：-profiles=prod，配置文件使用 config.prod.env config.env 前者会覆盖后者
+
+## 使用案例
+
+- [https://github.com/ltyyz/biligo](https://github.com/ltyyz/biligo) 
