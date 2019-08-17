@@ -21,7 +21,7 @@ server.key=12345678
 ```go
 goprofile.Load()
 
-os.Getenv("server.port")
+serverPort := goprofile.GetEnv("server.port")
 ```
 
 来获取配置文件中的值
